@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Suhade DS</title>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="btnMenu">
+        <nav>
+          <ul>
+            <li>
+              <a href="#Inicio" onclick="smoothScroll(event, this)">Inicio</a>
+            </li>
+            <li>
+              <a href="#About" onclick="smoothScroll(event, this)">Sobre Mi</a>
+            </li>
+            <li>
+              <a href="#Skills" onclick="smoothScroll(event, this)">Skills</a>
+            </li>
+            <li>
+              <a href="#Proyectos" onclick="smoothScroll(event, this)"
+                >Proyectos</a
+              >
+            </li>
+            <li>
+              <a href="#Contacto" onclick="smoothScroll(event, this)"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <section id="Inicio">
+      <div class="Text-I">
+        <p>DISEÑADOR GRÁFICO</p>
+        <h1>Joshual Daniel</h1>
+        <blockquote>
+          <span class="Motion"> Motion Designer </span><br /><br />
+          Actualmente soy
+          <!--YouTuber y creador-->creador de contenido y de Social Media.
+        </blockquote>
+      </div>
+      <div class="video">
+        <video autoplay muted loop src="img/video/13.mp4"></video>
+      </div>
+    </section>
+
+    <section id="About">
+      <div class="Text-A">
+        <h1>Sobre Mi</h1>
+
+        <p>
+          Hola👋 soy Joshual Daniel y soy un apacionado de la informatica y
+          sobre todo el Diseño Gráfico.
+        </p>
+        <a
+          class="Boton Contacto"
+          href="#Contacto"
+          onclick="smoothScroll(event, this)"
+          ><img src="img/SVG/profile.svg" alt="" />Contacto</a
+        >
+        <a
+          class="Boton Behance"
+          target="_blank"
+          href="https://www.behance.net/joshualalmonte"
+          ><img src="img/SVG/behance.svg" alt="" />Portafolio</a
+        >
+      </div>
+    </section>
+
+    <section id="Skills">
+      <div class="Text-A">
+        <h1>Mis habilidades</h1>
+      </div>
+      <div class="container">
+        <div class="cards">
+          <img src="img/img/AI.avif" alt="" />
+          <h1>Adobe Illustrator</h1>
+          <p>20%</p>
+        </div>
+        <div class="cards">
+          <img src="img/img/PS.avif" alt="" />
+          <h1>Adobe Photoshop</h1>
+          <p>50%</p>
+        </div>
+        <div class="cards">
+          <img src="img/img/XD.avif" alt="" />
+          <h1>Adobe XD</h1>
+          <p>60%</p>
+        </div>
+        <div class="cards">
+          <img src="img/img/FM.avif" alt="" />
+          <h1>Figma</h1>
+          <p>60%</p>
+        </div>
+        <div class="cards">
+          <img src="img/img/AFX.avif" alt="" />
+          <h1>Adobe After Effects</h1>
+          <p>30%</p>
+        </div>
+        <div class="cards">
+          <img src="img/img/CNV.avif" alt="" />
+          <h1>Canva</h1>
+          <p>80%</p>
+        </div>
+        <div class="cards">
+          <img src="img/img/CC.avif" alt="" />
+          <h1>Capcut</h1>
+          <p>70%</p>
+        </div>
+        <div class="cards">
+          <img src="" alt="" />
+          <h1></h1>
+          <p></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="Proyectos">
+      <div class="Text-A">
+        <h1>Proyectos</h1>
+        <div class="containerP">
+          <div id="P" class="P">
+            <img src="img/proyectos/Rifa.png" alt="" />
+            <div class="inf">
+              <h4>SOCIAL MEDIA</h4>
+              <sub
+                >este fue proyecto el cual me pidi&oacute; un cliente para
+                promocionar un SORTEO</sub
+              >
+            </div>
+          </div>
+          <div class="P">
+            <img src="img/proyectos/Hamburguer.png" alt="" />
+            <div class="inf">
+              <h4></h4>
+              <sub></sub>
+            </div>
+          </div>
+          <div class="P">
+            <img src="img/proyectos/Album.png" alt="" />
+            <div class="inf">
+              <h4></h4>
+              <sub></sub>
+            </div>
+          </div>
+          <div class="P">
+            <img src="" alt="" />
+            <div class="inf">
+              <h4></h4>
+              <sub></sub>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Contacto">
+      <div class="Mc">
+        <div class="Text-C">
+          <h1>Contacto</h1>
+          <div class="aboutY">
+            <p>Es hora de hablar sobre ti</p>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/direct/t/17849723127240492/"
+              >Hablame de tu proyecto</a
+            >
+          </div>
+          <div class="input">
+            <label for="Nombre">Nombre</label>
+            <input id="nombre" name="Nombre" type="text" placeholder="Nombre" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Suhade DS - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

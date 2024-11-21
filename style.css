@@ -1,0 +1,658 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Animaciones */
+@keyframes Motion {
+  0% {
+    background-color: #220901;
+  }
+  25% {
+    background-color: #621708;
+  }
+  50% {
+    background-color: #941b0c;
+  }
+
+  75% {
+    background-color: #bc3908;
+  }
+
+  90% {
+    background-color: #f6aa1c;
+  }
+
+  100% {
+    background-color: rgb(0, 0, 255);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in;
+}
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+  color: white;
+}
+
+.menu {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 60px;
+  border: solid black 2px;
+  border-radius: 20px;
+  width: 600px;
+  box-shadow: 2px 4px 10px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0); /* Fondo transparente */
+  backdrop-filter: blur(8px); /* Aplica el filtro de desenfoque */
+  border-radius: 20px;
+  z-index: -1; /* Asegura que el pseudo-elemento esté detrás de la imagen */
+}
+
+nav ul {
+  list-style: none;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a.active {
+  color: rgb(31, 198, 31);
+}
+
+.Text-I {
+  color: white;
+  margin: 100px;
+  margin-left: 200px;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.Text-I p {
+  font-weight: 300;
+  letter-spacing: 1.8px;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  top: 23px;
+  left: 4px;
+}
+
+.Text-I h1 {
+  font-size: 90px;
+  width: 50px;
+  font-family: "Open Sans", sans-serif;
+}
+
+blockquote {
+  border-left: solid 3px red;
+  margin-left: 10px;
+  padding: 10px;
+  width: 600px;
+}
+
+.Text-A {
+  color: white;
+  margin: 100px;
+  margin-left: 200px;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  height: 70vh;
+  scroll-snap-align: start;
+}
+
+.Text-A h1 {
+  text-decoration: underline;
+}
+
+.Text-A p {
+  margin-top: 80px;
+}
+
+.Text-C {
+  color: white;
+  margin: 100px;
+  margin-left: 200px;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  height: 61vh;
+}
+
+#Inicio {
+  background-color: rgb(0, 0, 255);
+  padding: 10px;
+  height: 100vh;
+  display: flex;
+}
+
+#Inicio video {
+  width: 350px;
+  position: relative;
+  top: 100px;
+  border-radius: 2vh;
+  right: 10vh;
+}
+
+#Inicio span.Motion {
+  transition: all 0.3s;
+  padding: 10px;
+  border-radius: 50px;
+
+  animation-name: Motion;
+  animation-duration: 4s;
+}
+
+#About {
+  background-color: rgba(0, 0, 0, 0.946);
+  padding: 10px;
+}
+
+#About p {
+  width: 400px;
+}
+
+.Text-A .Boton {
+  text-decoration: none;
+  background-color: rgb(31, 198, 31);
+  border: solid white 1px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  top: 50px;
+  font-size: 20px;
+  color: white;
+}
+
+.Text-A .Behance {
+  background-color: purple;
+}
+
+.Text-A .Behance img {
+  position: relative;
+  top: 1%;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.Text-A .Contacto img {
+  position: relative;
+  top: 1%;
+  width: 30px;
+  margin-right: 10px;
+}
+
+#Skills {
+  background-color: rgb(0, 0, 255);
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+  top: 230vh;
+  left: 25vh;
+  width: 160vh;
+}
+
+.cards {
+  margin: -10px;
+  padding: 10px;
+  border: 5px white solid;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #ffffff42;
+  color: white;
+  backdrop-filter: blur(4px);
+  width: 230px;
+  transition: 0.2s;
+
+  scale: 0.8;
+}
+
+.cards img {
+  width: 100px;
+}
+
+.cards p {
+  padding: 10px;
+  color: black;
+  font-weight: 800;
+}
+
+.cards:hover {
+  scale: 0.9;
+}
+
+#Proyectos {
+  background-color: rgba(0, 0, 0, 0.946);
+  padding: 10px;
+}
+
+.containerP {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.P {
+  margin: 10px;
+}
+
+.P img {
+  border-radius: 10px;
+  width: 300px;
+}
+
+.inf {
+  position: relative;
+  top: -382.9px;
+  background-color: #000000db;
+  height: 375px;
+  width: 300px;
+  padding: 10px;
+
+  border-radius: 9.3px;
+  opacity: 0;
+}
+
+.inf h4 {
+  text-align: center;
+}
+
+.inf sub {
+  font-size: 20px;
+  text-align: justify;
+}
+
+.P:hover .inf {
+  opacity: 100;
+  pointer-events: none;
+}
+
+#Contacto {
+  background-color: rgb(0, 0, 255);
+  padding: 10px;
+}
+
+#Contacto p {
+  width: 400px;
+}
+
+.Mc {
+  display: flex;
+}
+
+.input,
+input {
+  position: absolute;
+  left: 58vh;
+  display: block;
+}
+
+label {
+  position: absolute;
+  left: 60vh;
+  bottom: 0.2vb;
+  font-family: 'Open Sans';
+  font-weight: 800;
+}
+
+input:focus{
+  border: solid black 2px;
+}
+
+
+input{
+    border: solid black 20px;
+  
+  border-radius: 10px;
+  width: 250px;
+  height: 40px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.aboutY a {
+  text-decoration: none;
+  background-color: rgb(31, 198, 31);
+  border: solid white 1px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  top: 50px;
+  font-size: 20px;
+  color: white;
+  width: 100vw;
+}
+
+footer {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .menu {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 60px;
+    border: solid black 2px;
+    border-radius: 20px;
+    width: 600px;
+    box-shadow: 2px 4px 10px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0); /* Fondo transparente */
+    backdrop-filter: blur(8px); /* Aplica el filtro de desenfoque */
+    border-radius: 20px;
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás de la imagen */
+  }
+
+  nav ul {
+    list-style: none;
+    overflow: hidden;
+  }
+
+  nav ul li {
+    float: left;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul li a.active {
+    color: black;
+  }
+
+  .Text-I {
+    color: white;
+    margin: 100px;
+    margin-left: 100px;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .Text-I p {
+    font-weight: 300;
+    letter-spacing: 1.8px;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    top: 23px;
+    left: 4px;
+  }
+
+  .Text-I h1 {
+    font-size: 90px;
+    width: 50px;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  blockquote {
+    border-left: solid 3px red;
+    margin-left: 10px;
+    padding: 10px;
+    width: 600px;
+  }
+
+  #Inicio {
+    background-color: rgb(0, 0, 255);
+    padding: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .Text-A {
+    color: white;
+    margin: 100px;
+    margin-left: 120px;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    height: 70vh;
+  }
+
+  .Text-A h1 {
+    text-decoration: underline;
+  }
+
+  .Text-A p {
+    margin-top: 80px;
+  }
+
+  .Text-C {
+    color: white;
+    margin: 100px;
+    margin-left: 120px;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    height: 61vh;
+  }
+
+  #Inicio {
+    background-color: rgb(0, 0, 255);
+    padding: 10px;
+    height: 100vh;
+  }
+
+  #About {
+    background-color: rgba(0, 0, 0, 0.946);
+    padding: 10px;
+  }
+
+  #About p {
+    width: 400px;
+  }
+
+  .Text-A .Boton {
+    text-decoration: none;
+    background-color: rgb(31, 198, 31);
+    border: solid white 1px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    top: 50px;
+    font-size: 20px;
+    color: white;
+  }
+
+  .Text-A .Behance {
+    background-color: purple;
+  }
+
+  .Text-A .Behance img {
+    position: relative;
+    top: 1%;
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  .Text-A .Contacto img {
+    position: relative;
+    top: 1%;
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  #Skills {
+    background-color: rgb(0, 0, 255);
+    padding: 10px;
+  }
+
+  #Proyectos {
+    background-color: rgba(0, 0, 0, 0.946);
+    padding: 10px;
+  }
+
+  #Contacto {
+    background-color: rgb(0, 0, 255);
+    padding: 10px;
+  }
+
+  #Contacto p {
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .Text-A {
+    color: white;
+    margin: 100px;
+    margin-left: 120px;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    height: 70vh;
+  }
+
+  .Text-A h1 {
+    text-decoration: underline;
+  }
+
+  .Text-A p {
+    margin-top: 80px;
+  }
+
+  .Text-C {
+    color: white;
+    margin: 100px;
+    margin-left: 120px;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    height: 61vh;
+  }
+
+  #Inicio {
+    background-color: rgb(0, 0, 255);
+    padding: 10px;
+    height: 100vh;
+  }
+
+  #About {
+    background-color: rgba(0, 0, 0, 0.946);
+    padding: 10px;
+  }
+
+  #About p {
+    width: 400px;
+  }
+
+  .Text-A .Boton {
+    text-decoration: none;
+    background-color: rgb(31, 198, 31);
+    border: solid white 1px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    top: 50px;
+    font-size: 20px;
+    color: white;
+  }
+
+  .Text-A .Behance {
+    background-color: purple;
+  }
+
+  .Text-A .Behance img {
+    position: relative;
+    top: 1%;
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  .Text-A .Contacto img {
+    position: relative;
+    top: 1%;
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  #Skills {
+    background-color: rgb(0, 0, 255);
+    padding: 10px;
+  }
+
+  #Proyectos {
+    background-color: rgba(0, 0, 0, 0.946);
+    padding: 10px;
+  }
+
+  #Contacto {
+    background-color: rgb(0, 0, 255);
+    padding: 10px;
+  }
+
+  #Contacto p {
+    width: 400px;
+  }
+}
