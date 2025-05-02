@@ -24,7 +24,7 @@
     background-color: rgb(0, 0, 255);
   }
 }
-
+/*? Configuracion general */
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +37,10 @@ body {
   background-color: #f0f0f0;
   overflow-x: hidden;
   color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 .menu {
@@ -265,12 +269,41 @@ blockquote {
   padding: 10px;
 }
 
+
 .containerP {
   margin: 10px;
   padding: 10px;
   display: flex;
   flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  height: 420px;
+
+  scroll-behavior: smooth;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.containerP::-webkit-scrollbar {
+  height: 8px;
+}
+
+.containerP::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border-radius: 10px;
+}
+
+.containerP::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #4e0ec2, #1b5bd6);
+}
+
+.containerP::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
 
 .P {
   margin: 10px;
@@ -280,6 +313,17 @@ blockquote {
   border-radius: 10px;
   width: 300px;
 }
+
+.P video {
+  margin-top: 10px;
+  width: 662px;
+  position: relative;
+  top: -10px;
+  left: 10px;
+  border-radius: 10px;
+}
+
+/*? Informacion de los anuncios generales */
 
 .inf {
   position: relative;
@@ -302,9 +346,43 @@ blockquote {
   text-align: justify;
 }
 
+/* ?Informacion del video */
+
+.infV {
+  position: relative;
+  top: -390.9px;
+  left: 10px;
+  background-color: #000000db;
+  height: 372px;
+  width: 662px;
+  padding: 10px;
+
+  border-radius: 9.3px;
+  opacity: 0;
+}
+
+.infV h4 {
+  text-align: center;
+}
+
+.infV sub {
+  font-size: 20px;
+  text-align: justify;
+}
+
 .P:hover .inf {
   opacity: 100;
   pointer-events: none;
+}
+
+.P:hover .infV {
+  opacity: 100;
+  pointer-events: none;
+}
+
+.P a {
+  text-decoration: none;
+  color: white;
 }
 
 #Contacto {
@@ -331,18 +409,17 @@ label {
   position: absolute;
   left: 60vh;
   bottom: 0.2vb;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: 800;
 }
 
-input:focus{
+input:focus {
   border: solid black 2px;
 }
 
+input {
+  border: solid black 20px;
 
-input{
-    border: solid black 20px;
-  
   border-radius: 10px;
   width: 250px;
   height: 40px;
@@ -350,7 +427,7 @@ input{
   padding-left: 10px;
 }
 
-.aboutY a {
+.aboutY > a {
   text-decoration: none;
   background-color: rgb(31, 198, 31);
   border: solid white 1px;
